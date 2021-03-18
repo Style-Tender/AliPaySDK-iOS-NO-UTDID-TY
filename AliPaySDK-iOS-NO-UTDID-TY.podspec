@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.author       = { "Mr.Tian" => "785072254@qq.com" }
   spec.platform     = :ios, "9.0"
   spec.source       = { :http => "https://raw.githubusercontent.com/Style-Tender/AliPaySDK-iOS-NO-UTDID-TY/main/core.zip", :type => "zip"}
-  spec.ios.vendored_framework = 'core/AlipaySDK.framework'
+  spec.vendored_frameworks = 'core/AlipaySDK.framework'
   spec.resources = "core/AlipaySDK.bundle"
 
 end
