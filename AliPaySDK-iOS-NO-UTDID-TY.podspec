@@ -8,8 +8,9 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/Style-Tender/AliPaySDK-iOS-NO-UTDID-TY.git", :tag => spec.version }
   spec.vendored_frameworks = 'core/AlipaySDK.framework'
   spec.resources = "core/AlipaySDK.bundle"
-  s.requires_arc = true
-  s.frameworks = "SystemConfiguration", "CoreTelephony", "QuartzCore", "CoreText", "CoreGraphics", "UIKit", "Foundation", "CFNetwork", "CoreMotion","WebKit"
-  s.libraries = "z", "c++"
+  spec.pod_target_xcconfig = { 'VALID_ARCHS[sdk=iphonesimulator*]' => '' }
+  spec.requires_arc = true
+  spec.frameworks = "SystemConfiguration", "CoreTelephony", "QuartzCore", "CoreText", "CoreGraphics", "UIKit", "Foundation", "CFNetwork", "CoreMotion","WebKit"
+  spec.libraries = "z", "c++"
   
 end
